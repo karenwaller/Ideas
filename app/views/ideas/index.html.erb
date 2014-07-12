@@ -1,0 +1,37 @@
+<h1>Listing ideas <small> The Beginning </small> </h1>
+
+<h3>This is a table of things that are on my desktop right now</h3>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ideas.each do |idea| %>
+      <tr>
+        <td><%= idea.name %></td>
+        <td><%= idea.description %></td>
+        <td><%= idea.picture %></td>
+        <td><%= link_to 'Show', idea %></td>
+        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
+        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Idea', new_idea_path %>
+
+<br>
+<br>
+
+<h3>I have no more things to add, but here is where more will come <small> eventually </small> </h3>
+<p>Which of the following is a correct about the correct action to take for a child who scores a 1 on the SPOC observation chart pain scale  (accompanied by the world’s blurriest picture of the obs chart 2 pages and instructions on what to do that you could JUST read if you’re good at interpreting blurry things, or not if you’re a normal person). </p>
+<p class="lead"> "If I ever learn how to run things, things will be <mark>running</mark>."-Karen </p>
